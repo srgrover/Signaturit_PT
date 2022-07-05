@@ -1,4 +1,4 @@
-﻿namespace Signaturit_PT.Domain.Entities
+﻿namespace Signaturit_PT.Entities
 {
     public class ContractVersus
     {
