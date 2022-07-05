@@ -1,7 +1,7 @@
 global using Signaturit_PT.Servicios;
 using Microsoft.AspNetCore.Mvc;
-using Signaturit_PT.Domain.Entities;
-using Signaturit_PT.Domain.Interfaces;
+using Signaturit_PT.Entities;
+using Signaturit_PT.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,5 +24,11 @@ app.MapPost("/getWinner", (ContractVersus contract, ISignature _iSignature) =>
     return _iSignature.WinnerByContract(contract); ;
 })
 .WithName("getWinner");
+
+app.MapPost("/getSignatureToWin", (ContractVersus contract, ISignature _iSignature) =>
+{
+    return _iSignature.SignatureToWinByContract(contract);
+})
+.WithName("getSignatureToWin");
 
 app.Run();
