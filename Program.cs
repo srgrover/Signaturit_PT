@@ -32,3 +32,5 @@ app.MapPost("/getSignatureToWin", (ContractVersus contract, ISignature _iSignatu
 .WithName("getSignatureToWin");
 
 app.Run();
+
+public partial class Program { }
